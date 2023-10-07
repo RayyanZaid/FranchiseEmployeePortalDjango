@@ -7,6 +7,6 @@ from typing import List
 urlpatterns : List[URLPattern]  = [
 
          # the url the user has to access       # the view that is run (reference to the function)
-    path(      'playground/hello',               views.say_hello)
+    path(        'hello/',               views.say_hello)
 
 ]
