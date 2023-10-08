@@ -11,7 +11,8 @@ from django.http import JsonResponse
 
 def say_hello(request):
     # Create a Python dictionary representing your JSON data
-    data = {'message': 'Hello, World!'}
+    data = {'name': 'Rayyan'}
 
     # Use JsonResponse to convert the dictionary to a JSON response
     return JsonResponse(data)
+ 

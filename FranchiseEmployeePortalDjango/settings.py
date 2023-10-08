@@ -78,12 +78,19 @@ WSGI_APPLICATION = "FranchiseEmployeePortalDjango.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+password = os.getenv('mySQL_PASSWORD')
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'testing',   # Replace with your database name
+        'USER': 'root',      # Replace with your MySQL username
+        'PASSWORD': password,    # Replace with your MySQL password
+        'HOST': '127.0.0.1',            # Replace with your MySQL server's host
+        'PORT': '3306',                 # Replace with your MySQL server's port
     }
 }
+
 
 
 # Password validation
